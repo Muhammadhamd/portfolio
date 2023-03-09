@@ -22,6 +22,9 @@
         background-color: #1f242d;
         color: #fff;
     }
+    
+
+
     .header{
         display: flex;
         position: fixed;
@@ -30,7 +33,14 @@
         justify-content: space-between;
         padding: 20px 10%;
         z-index: 100;
+        align-items: center;
+         background: linear-gradient(to bottom, #000, #0003 70%,#0000); /* background when scroll is in the top */
+  transition: background .5s; /* control how smooth the background changes */
     }
+
+    .header.scrolled{
+  background: #0000007d;
+}
     .header .logo{
         font-size: 25px;
         text-decoration: none;
@@ -42,7 +52,7 @@
     .header nav{
         display: flex;
     }
-    .header nav a{
+    .header nav a ,.header nav div {
         color: #fff;
         font-weight: 500;
         font-size: 18px;
@@ -53,9 +63,13 @@
         opacity: 0;
         animation-delay: calc(.2s * var(--i));
         }
+
         .header nav a:hover ,.header nav a.active{
             color: #0ef;
             padding: 0px 0px;
+        }
+        .header nav .menu-mb{
+            display: none;
         }
 
 
@@ -247,7 +261,24 @@
 
     }
 }
+@media screen and (max-width: 700px){
+            .header nav .menu-mb{
+                display: block;
+        }
+        .header nav a:nth-of-type(5){
+        display: none;
+    }
+    }
+    @media screen and (max-width: 660px){
+
+        .header nav a:nth-of-type(4){
+        display: none;
+    }
+    }
 @media screen and (max-width: 580px){
+    .header nav a:nth-of-type(3){
+        display: none;
+    }
     .section1 .container h1{
         font-size: 50px;
     }
@@ -260,6 +291,7 @@
         }
 
         @media screen and (max-width: 500px){
+
     .section1 .container h1{
         font-size: 48px;
     }
@@ -269,17 +301,66 @@
             .section1 .container p{
                 font-size: 12px;
             }
+            .container .btn{
+                margin: 30px 55px;
+            }
         }
-        @media screen and (max-width: 300px){
+        @media screen and (max-width: 430px){
+            .header .logo{
+                font-size: 20px;
+            }
+            .header nav div{
+                font-size: 19px;
+            }
+            .header nav a{
+                font-size: 14px;
+            }
+            /* .header nav a:nth-of-type(2){
+        display: none;
+    } */
+    .section1 .container h3 span{
+        font-size: 15px;
+    }
+        }
+        @media screen and (max-width: 335px){
+            .header{
+                padding: 20px 5%;
+            }
+            .header nav a{
+                display:none ;
+            }
+            .header nav div{
+                font-size: 30px;
+            }
             .section1 .image-container .image-holder {
     width: 100%;
 }
+           
+.section1 .container h1{
+        font-size: 44px;
+    }
+    .section1 .container h3{
+                font-size: 20px;
+            }
+            .section1 .container p{
+                margin: 0 0 20px 0;
+                font-size: 10px;
+            }
+        
+        .section1 .container .social-div {
+            flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
         }
+        .section1 .container .social-div a{
+            margin:10px 0 0 10px;
+        }
+    }
 
 
 </style>
 <body>
-    <header class="header">
+    <header class="header active-header" id="header">
         <a href="" class="logo">Portfolio.</a>
         <nav>
             <a href="#" style="--i:1;" class="active">Home</a>
@@ -287,6 +368,7 @@
             <a href="#" style="--i:3;">Projects</a>
             <a href="#" style="--i:4;">About</a>
             <a href="#" style="--i:5;">Services</a>
+            <div class="menu-mb"><i class='bx bx-menu'></i></div>
         </nav>
     </header>
     <section class="section1">
@@ -296,17 +378,17 @@
     <h3>And I'm a <span class="multi-headline"></span></h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio recusandae reprehenderit illum velit, repellendus ex.</p>
     <div class="social-div">
-        <a href="" style="--i:7"><i class='bx bxl-facebook'></i></a>
-        <a href="" style="--i:8"><i class='bx bxl-instagram-alt'></i></a>
-        <a href="" style="--i:9"><i class='bx bxl-github'></i></a>
-        <a href="" style="--i:10"><i class='bx bxl-linkedin'></i></a>
-        <a href="" style="--i:11"><i class='bx bxl-codepen'></i></a>
+        <a target="_blank" href="https://www.facebook.com/muhammadhamd11/" style="--i:7"><i class='bx bxl-facebook'></i></a>
+        <a target="_blank" href="https://www.instagram.com/hamd_studiology/" style="--i:8"><i class='bx bxl-instagram-alt'></i></a>
+        <a target="_blank" href="https://www.github.com/muhammadhamd/" style="--i:9"><i class='bx bxl-github'></i></a>
+        <a target="_blank" href="https://www.linkedin.com/in/muhammad-hamd-6828b1249/" style="--i:10"><i class='bx bxl-linkedin'></i></a>
+        <a target="_blank" href="" style="--i:11"><i class='bx bxl-codepen'></i></a>
     </div>
     <a href="" class="btn">Download CV</a>
 </div> 
 <div class="image-container">
     <div class="image-holder">
-      <img src="img/111101485.jpg"">
+      <img src="img/logo.jpg"">
     </div>
 </div>
     </section>
@@ -319,6 +401,22 @@
             backdelay:1000,
             loop:true
         })
+
+
+        // change bg color on scroll
+
+    
+       let navbar = document.querySelector('header')
+
+window.onscroll = function() {
+
+  // pageYOffset or scrollY
+  if (window.pageYOffset > 0) {
+    navbar.classList.add('scrolled')
+  } else {
+    navbar.classList.remove('scrolled')
+  }
+}
     </script>
 </body>
 </html>
