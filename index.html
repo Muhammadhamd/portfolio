@@ -10,353 +10,76 @@
 <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Acme&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Josefin+Sans:ital,wght@1,500;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@700&family=Pacifico&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Glitch&family=Ubuntu+Condensed&family=Ubuntu:wght@500&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <title>Portfolio|Muhammad Hamd Dev</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <style>
-    *{
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        font-family: "Poppins" , sans-serif;
+    .section2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    body{
-        background-color: #1f242d;
-        color: #fff;
+    .section2 .heading{}
+    .section2 .blog-div{
+        display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 35px 0;
+    gap: 30px;
+    flex-wrap: wrap;
+        padding: 0px 20px;
+    }
+    .section2 .blog-div .blog{
+        background-color: #32384d;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 105px #000000b0;
+    overflow: hidden;
+    height: 481px;
+    width: ;
+    }
+    .section2 .blog-div .blog .content img{
+        width: 100%;
+    }
+    .section2 .blog-div .blog .content{
+        width: 100%;
+    height: 90%;
+    overflow: hidden;
+    }
+    .section2 .blog-div .blog .content h1{
+        padding: 2px 11px;
+        font-size: 20px;
+    }
+    .section2 .blog-div .blog .content p{
+        padding: 2px 11px;
+        font-size: 15px;
+    line-height: 1.55rem;
+    color: #0ed;
     }
     
-
-
-    .header{
-        display: flex;
-        position: fixed;
-        background: transparent;
-        width: 100%;
-        justify-content: space-between;
-        padding: 20px 10%;
-        z-index: 100;
-        align-items: center;
-         background: linear-gradient(to bottom, #000, #0003 70%,#0000); /* background when scroll is in the top */
-  transition: background .5s; /* control how smooth the background changes */
-    }
-
-    .header.scrolled{
-  background: #0000007d;
-}
-    .header .logo{
-        font-size: 25px;
-        text-decoration: none;
-        color: #fff;
-        font-weight: 600;
-        opacity: 0;
-        animation: slideright 1s ease forwards;
-    }
-    .header nav{
-        display: flex;
-    }
-    .header nav a ,.header nav div {
-        color: #fff;
-        font-weight: 500;
-        font-size: 18px;
-        text-decoration: none;
-        margin: 0 0 0 30px;
-        transition:.3s ;
-        animation: slidetop .5s ease forwards;
-        opacity: 0;
-        animation-delay: calc(.2s * var(--i));
-        }
-
-        .header nav a:hover ,.header nav a.active{
-            color: #0ef;
-            padding: 0px 0px;
-        }
-        .header nav .menu-mb{
-            display: none;
-        }
-
-
-        .section1{
-            display: flex;
-    padding: 86px 10% 0;
+    .section2 .blog-div .blog .lr-div{
+        box-shadow: 0px -8px 4px #ffffff45, 0px -18px 27px #ffffff3b;
+    display: inline-flex;
     width: 100%;
-    align-items: center;
-    min-height: 100vh;
-    justify-content: space-between;
-        }
-
-        .section1 .container{
-            max-width: 600px;
-            margin: 20px 0;
-        }
-        .section1 .container h3{
-            font-size: 32px;
-            font-weight: 700;
-            opacity: 0;
-            animation: slidebottom 1s ease forwards;
-            animation-delay:.7s ;
-        }
-        .section1 .container h3 span{
-            color: #0ef;
-        }
-        .section1 .container h3:nth-of-type(2){
-            margin: 0 0 30px 0;
-            animation: slidetop 1s ease forwards;
-            animation-delay:.7s ;
-        }
-        .section1 .container h1{
-            font-size: 56px;
-            font-weight: 700px;
-            margin: 3px 0;
-            opacity: 0;
-            animation: slideright 1s ease forwards;
-            animation-delay:1s ;
-            line-height: 60px;
-        }
-        .section1 .container p{
-            font-size: 16px;
-            animation: slideleft 1s ease forwards;
-            animation-delay: 1s;
-            opacity: 0;
-        }
-        .section1 .image-container{
-            margin: 0 0 0 15px;
-        }
-        .section1 .image-container .image-holder{
-            width: 320px;
-        }
-        .section1 .image-container .image-holder img{
-            width: 100%;
-            border-radius: 50%;
-            opacity: 0;
-            animation: zoomin 1s ease forwards , updownimg 4s ease-in-out infinite;
-            animation-delay:3s ;
-        }
-
-        .social-div{}
-        .social-div a{
-           display: inline-flex;
-           justify-content: center;
-           align-items: center;
-           width: 40px;
-           height: 40px;
-           color: #0ef;
-           border: 2px solid #0ef;
-           border-radius: 50%;
-           font-size: 20px;
-           background: transparent;
-           text-decoration: none;
-           margin: 30px 15px 30px 0;
-           transition: .5s ease;
-           opacity: 0;
-            animation: slideleft 1s ease forwards;
-            animation-delay:calc(.2s * var(--i));
-        }
-        .social-div a:hover{
-            color: #1f242d;
-            background-color: #0ef;
-            box-shadow: 0px 0px 5px #0ef;
-        }
-
-        .container .btn{
-            display: inline-block;
-            padding: 12px 28px;
-            border-radius: 40px;
-            box-shadow: 0px 0px 10px #0ef;
-            color: #1f242d;
-            text-decoration: none;
-            background-color: #0ef;
-            font-size: 15px;
-            font-weight: 600;
-            animation: slidetop .5s ease forwards;
-            animation-delay: 2s;
-            opacity: 0;
-        }
-
-        @keyframes slideright{
-            0%{
-                transform: translateX(-100px);
-                opacity: 0;
-            }
-            100%{
-                transform: translateX(0px);
-                opacity: 1;
-            }
-        }
-        @keyframes slideleft{
-            0%{
-                transform: translateX(100px);
-                opacity: 0;
-            }
-            100%{
-                transform: translateX(0px);
-                opacity: 1;
-            }
-        }
-        @keyframes slidetop{
-            0%{
-                transform: translateY(100px);
-                opacity: 0;
-            }
-            100%{
-                transform: translateY(0px);
-                opacity: 1;
-            }
-        }
-        @keyframes slidebottom{
-            0%{
-                transform: translateY(-100px);
-                opacity: 0;
-            }
-            100%{
-                transform: translateY(0px);
-                opacity: 1;
-            }
-        }
-        @keyframes zoomin{
-            0%{
-                transform:scale(0);
-                opacity: 0;
-            }
-            100%{
-                transform:scale(1);
-                opacity: 1;
-            }
-        }
-        @keyframes updownimg{
-            0%{
-                transform: translateY(0px);
-                
-            }
-            50%{
-                transform: translateY(-25px);
-
-            }
-            100%{
-                transform: translateY(0px);
-
-            }
-        }
-        @media screen and (max-width:1110px) {
-            .section1 .image-container .image-holder {
-    width: 300px;
-}
-
-
-        }
-        @media screen and (max-width:1010px) {
-            .section1 .container h3{
-                font-size: 30px;
-            }
-            .section1 .container p{
-                font-size: 15px;
-            }
-        }
-
-        @media screen and (max-width: 940px){
-.section1 .image-container .image-holder {
-    width: 275px;
-}}
-@media screen and (max-width: 800px){
-    .section1{
-        flex-wrap: wrap;
-        justify-content: center;
-
+    align-items: end;
+    height: 51px;
     }
-}
-@media screen and (max-width: 700px){
-            .header nav .menu-mb{
-                display: block;
-        }
-        .header nav a:nth-of-type(5){
-        display: none;
-    }
-    }
-    @media screen and (max-width: 660px){
-
-        .header nav a:nth-of-type(4){
-        display: none;
-    }
-    }
-@media screen and (max-width: 580px){
-    .header nav a:nth-of-type(3){
-        display: none;
-    }
-    .section1 .container h1{
-        font-size: 50px;
-    }
-    .section1 .container h3{
-                font-size: 25px;
-            }
-            .section1 .container p{
-                font-size: 15px;
-            }
-        }
-
-        @media screen and (max-width: 500px){
-
-    .section1 .container h1{
-        font-size: 48px;
-    }
-    .section1 .container h3{
-                font-size: 22px;
-            }
-            .section1 .container p{
-                font-size: 12px;
-            }
-            .container .btn{
-                margin: 30px 55px;
-            }
-        }
-        @media screen and (max-width: 430px){
-            .header .logo{
-                font-size: 20px;
-            }
-            .header nav div{
-                font-size: 19px;
-            }
-            .header nav a{
-                font-size: 14px;
-            }
-            /* .header nav a:nth-of-type(2){
-        display: none;
-    } */
-    .section1 .container h3 span{
-        font-size: 15px;
-    }
-        }
-        @media screen and (max-width: 335px){
-            .header{
-                padding: 20px 5%;
-            }
-            .header nav a{
-                display:none ;
-            }
-            .header nav div{
-                font-size: 30px;
-            }
-            .section1 .image-container .image-holder {
-    width: 100%;
-}
-           
-.section1 .container h1{
-        font-size: 44px;
-    }
-    .section1 .container h3{
-                font-size: 20px;
-            }
-            .section1 .container p{
-                margin: 0 0 20px 0;
-                font-size: 10px;
-            }
-        
-        .section1 .container .social-div {
-            flex-wrap: wrap;
-    display: flex;
+    .section2 .blog-div .blog .lr-div a{
+        margin: 20px 0;
+    display: inline-flex;
+    color: white;
+    text-decoration: none;
     justify-content: center;
-        }
-        .section1 .container .social-div a{
-            margin:10px 0 0 10px;
-        }
+    width: 100%;
     }
 
+    @media screen and (max-width:320px) {
+    .section2 .blog-div .blog .content p{
+        font-size: 100%;
+    }
+    .section2 .blog-div .blog .content h1{
+        font-size: 20px;
+    }
+}
 
 </style>
 <body>
@@ -392,31 +115,48 @@
     </div>
 </div>
     </section>
+    <section class="section2">
+        <h1 class="heading">Blogs</h1>
+        <div class="blog-div">
+            <div class="blog">
+                <div class="content">
+                <img src="img/blogs/jsblogs.png" alt="">
+
+                    <h1>See what's new in JavaScript</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, molestiae. Nihil fuga ut eaque ratione commodi praesentium dolor nemo! Tenetur, similique. Sed neque ipsum sapiente quia magni quod, suscipit quae.</p>
+
+                </div>
+                <div class="lr-div">
+                        <a href="">Learn more</a>
+                </div>
+            </div>
+            <div class="blog">
+                <div class="content">
+                <img src="img/blogs/blog2.jpg" alt="">
+
+                    <h1>See what's new in JavaScript</h1>
+                    <p>Losaepe vel retatis ama cumque. Soluta facere, et, tempora repellendus voluptatem perferendis aliquam minus veniam, mollitia in voluptatibus enim nihil. Impedit debitis molestiae minima unde beatae.</p>
+               
+                </div>
+                <div class="lr-div">
+                    <a href="">Learn more</a>
+                </div>
+            </div>
+            <div class="blog">
+                <div class="content">
+                <img src="img/blogs/blog3.jpg" alt="">
+
+                    <h1>See what's new in JavaScript</h1>
+                    <p>Losaepe vel retatis ama cumque. Soluta facere, et, tempora repellendus voluptatem perferendis aliquam minus veniam, mollitia in voluptatibus enim nihil. Impedit debitis molestiae minima unde beatae.</p>
+                    
+                </div>
+                <div class="lr-div">
+                    <a href="">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script>
-        let typed = new Typed(".multi-headline",{
-            strings:["Frontend Developer",  "MERN Developer","Graphic Designer","Freelancer","Bloger"],
-            typeSpeed:80,
-            backSpeed:80,
-            backdelay:1000,
-            loop:true
-        })
-
-
-        // change bg color on scroll
-
-    
-       let navbar = document.querySelector('header')
-
-window.onscroll = function() {
-
-  // pageYOffset or scrollY
-  if (window.pageYOffset > 0) {
-    navbar.classList.add('scrolled')
-  } else {
-    navbar.classList.remove('scrolled')
-  }
-}
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
