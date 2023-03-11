@@ -292,7 +292,7 @@ width: 275px;
         }
 
         /* blogdiv2 */
-        
+
 .section2 .blog-div2 .main-box .blog{
     margin: 25px 0;
 }
@@ -327,6 +327,8 @@ width: 275px;
 
 
     }
+
+
     @media screen and (max-width: 335px){
         .header{
             padding: 20px 5%;
