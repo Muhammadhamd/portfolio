@@ -175,7 +175,9 @@ rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/a
                 <input type="email" name="" id="userEmail" placeholder="YourEmail....">
                 <input type="text" name="" id="quiz" placeholder="....What is 2+2?...">
             </div>
-            <textarea class="textarea" contenteditable="true" id="messege"></textarea>
+            <textarea id="messege" contenteditable="true">
+
+            </textarea>
             <div>
                <p>.</p> <button><a
                 href="" id="sendmail">Reach out to us</a></button><p>.</p>
@@ -197,12 +199,23 @@ rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/a
         userNumber = document.getElementById("usernum"),
         quizQ = document.getElementById("quiz");
 
+        // function to add line break code
+        let msg = document.getElementById("messege");
 
-    sendMail.addEventListener("click" ,function() {
-        
-        if(quizQ.value === 4){
+        msg.addEventListener(
+            "keyup",
+            function (e){
+                if(e.key == "Enter"){
+                    let code ="%0d%0";
+                    msg.value +=code;
+                }
+            }
+        )
+        // function to send mail 
+    sendMail.addEventListener("click" ,function(e) {
+        if(quizQ.value == 4){
     alert("opening your default email app...");
-            sendMail.href = "mailto:muhammadhamdali572@gmail.com?Subject="+ document.getElementById("messege").value
+            sendMail.href = "mailto:muhammadhamdali572@gmail.com?Subject="+ msg.value
                                 + "%0d%0a"+"%0d%0a"+"%0d%0a"+"%0d%0a"+"%0d%0a"+"%0d%0a"
                                 + "%0d%0a"+"Name:"+userName.value
                                 +"%0d%0a"+
@@ -211,6 +224,7 @@ rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/a
                              "Number:"+userNumber.value;
         }else{
             alert("2+2 is 4 you dont know?");
+
         }
         
     })
@@ -221,7 +235,7 @@ rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/a
     const lightTheme = document.getElementById("lighttheme");
 
     lightTheme.addEventListener("click",function(){
-        document.querySelector("body").style = "background:#ccc;color:black;";
+        document.querySelector("body").style = "background:white;color:black;";
         document.querySelector(".header").style.background= "transparent";
         document.querySelector(".scrolled").style.background= "#0000007d";
         document.querySelector(".header .logo").style= "color:crimson";
@@ -229,8 +243,37 @@ rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/a
         for(let i=0; i < headNavA.length; i++){
             headNavA[i].style = "color:black";
         }
-   
+
+        let blogs = document.querySelectorAll(".section2 .blog-div2 .main-box .blog");
+        for(let i=0; i<blogs.length; i++){
+            blogs[i].style = "background-color:#efefef";
+        }
    document.querySelector(".section1 .container h3 span").style= "color:#ab5e00";
+
+
+   document.querySelector(".section3 .main-box1 .image-side .img-frame ").style = "box-shadow: 0px 0px 10px #000000a8; background-color: #efefef;";
+
+   document.querySelector(".section3 .main-box1 .content-side h3 span").style = "color: darkorange;";
+
+   document.querySelector(".section3 .main-box1 .content-side h3 span").style= "color: darkorange;";
+   document.querySelector(" .section3 .main-box2 h3 span").style= "color: darkorange;";
+   document.querySelector(" .section3 .main-box1 .content-side h1 span").style= "color: darkorange;";
+   document.querySelector(" .section4 h3 span").style= "color: darkorange;";
+
+   let socialLink = document.querySelectorAll(".social-div a");
+
+   for (let i = 0; i < socialLink.length; i++) {
+    socialLink[i].style = "color:darkorange; border: 2px solid darkorange;";
+   }
+    let socialLinkHover = document.querySelectorAll(".social-div a:hover");
+
+   for (let i = 0; i < socialLinkHover.length; i++) {
+    socialLinkHover[i].style = "color:white; backfround-color:darkorange;";
+    
+   }
+   
+
+   
 
 
     })
