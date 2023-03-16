@@ -17,7 +17,31 @@ rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/a
     <link rel="stylesheet" href="css/section2,3,4.css">
 </head>
 <style>
-
+.theme-div{
+    width: 83px;
+    background-color: #36374d;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+.theme-div button{
+    border-radius: 50%;
+    width: 26px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+}
+.theme-div .ball{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    right: 7px;
+    transition:.5s linear;
+}
 </style>
 <body>
     <header class="header active-header" id="header">
@@ -28,7 +52,11 @@ rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/a
             <a href="#blog" style="--i:3;">Blogs</a>
             <a href="#about" style="--i:4;">About</a>
             <a href="#" style="--i:5;">Services</a>
-            <div><button id="lighttheme">light</button></div>
+            <div class="theme-div" style="--i:6;">
+                <button id="lighttheme" style="color:yellow"><i class='bx bx-sun'></i></button>
+                <button id="darktheme"  style="color:pink"><i class='bx bx-moon'></i></button>
+                <div class="ball"></div>
+            </div>
             <div class="menu-mb"><i class='bx bx-menu'></i></div>
         </nav>
     </header>
@@ -191,94 +219,8 @@ rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/a
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-
-    let sendMail =document.getElementById("sendmail"),
-        userName = document.getElementById("username"),
-        userEmail = document.getElementById("userEmail"),
-        userNumber = document.getElementById("usernum"),
-        quizQ = document.getElementById("quiz");
-
-        // function to add line break code
-        let msg = document.getElementById("messege");
-
-        msg.addEventListener(
-            "keyup",
-            function (e){
-                if(e.key == "Enter"){
-                    let code ="%0d%0";
-                    msg.value +=code;
-                }
-            }
-        )
-        // function to send mail 
-    sendMail.addEventListener("click" ,function(e) {
-        if(quizQ.value == 4){
-    alert("opening your default email app...");
-            sendMail.href = "mailto:muhammadhamdali572@gmail.com?Subject="+ msg.value
-                                + "%0d%0a"+"%0d%0a"+"%0d%0a"+"%0d%0a"+"%0d%0a"+"%0d%0a"
-                                + "%0d%0a"+"Name:"+userName.value
-                                +"%0d%0a"+
-                                 "Email:"+userEmail.value
-                                +"%0d%0a"+
-                             "Number:"+userNumber.value;
-        }else{
-            alert("2+2 is 4 you dont know?");
-
-        }
-        
-    })
-
-
-    // light theme script
-
-    const lightTheme = document.getElementById("lighttheme");
-
-    lightTheme.addEventListener("click",function(){
-        document.querySelector("body").style = "background:white;color:black;";
-        document.querySelector(".header").style.background= "transparent";
-        document.querySelector(".scrolled").style.background= "#0000007d";
-        document.querySelector(".header .logo").style= "color:crimson";
-        const headNavA = document.querySelectorAll(".header nav a");
-        for(let i=0; i < headNavA.length; i++){
-            headNavA[i].style = "color:black";
-        }
-
-        let blogs = document.querySelectorAll(".section2 .blog-div2 .main-box .blog");
-        for(let i=0; i<blogs.length; i++){
-            blogs[i].style = "background-color:#efefef";
-        }
-   document.querySelector(".section1 .container h3 span").style= "color:#ab5e00";
-
-
-   document.querySelector(".section3 .main-box1 .image-side .img-frame ").style = "box-shadow: 0px 0px 10px #000000a8; background-color: #efefef;";
-
-   document.querySelector(".section3 .main-box1 .content-side h3 span").style = "color: darkorange;";
-
-   document.querySelector(".section3 .main-box1 .content-side h3 span").style= "color: darkorange;";
-   document.querySelector(" .section3 .main-box2 h3 span").style= "color: darkorange;";
-   document.querySelector(" .section3 .main-box1 .content-side h1 span").style= "color: darkorange;";
-   document.querySelector(" .section4 h3 span").style= "color: darkorange;";
-
-   let socialLink = document.querySelectorAll(".social-div a");
-
-   for (let i = 0; i < socialLink.length; i++) {
-    socialLink[i].style = "color:darkorange; border: 2px solid darkorange;";
-   }
-    let socialLinkHover = document.querySelectorAll(".social-div a:hover");
-
-   for (let i = 0; i < socialLinkHover.length; i++) {
-    socialLinkHover[i].style = "color:white; backfround-color:darkorange;";
-    
-   }
-   
-
-   
-
-
-    })
-
-    
-    </script>
+    <script src="js/mailsend.js"></script>
+    <script src="/js/darktheme.js"></script>
+    <script src="/js/lighttheme.js"></script>
 </body>
 </html>
