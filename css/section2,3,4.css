@@ -101,7 +101,7 @@ justify-content: end;
 box-shadow: 0px 0px 10px #0000009e;
 /* width: 602px; */
 max-width: 753px;
-margin: 50px 0;
+margin: 40px 0;
 padding: 20px;
 width: 100%;
 
@@ -171,13 +171,14 @@ flex-wrap: wrap-reverse;
 .section3 .main-box2{
     margin: 10px 5%;
 }
-/* image section */
+/* image and skills section */
 
 .section3 .main-box1 .image-side{
 width: 40%;
 min-width: 400px;
 display: flex;
-justify-content: center;
+flex-direction: column;
+align-items: center;
 }
 .section3 .main-box1 .image-side .img-frame{
     width: 390px;
@@ -196,17 +197,51 @@ align-items: end;
     width: 100%;
 }
 
+.section3 .main-box1 .image-side .skills-sec{
+    width: 74%;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0 0 25px;
+}
+.section3 .main-box1 .image-side .skills-sec h3{
+    margin: 10px 0;
+}
+.section3 .main-box1 .image-side .skills-sec div{
+    width: 75%;
+    background-color: white;
+    height: 3px;
+}
+.section3 .main-box1 .image-side .skills-sec div div{
+    background-color: #998dcf;
+}
+.section3 .main-box1 .image-side .skills-sec div:nth-of-type(1) div{
+    width: 98%;
+}
+.section3 .main-box1 .image-side .skills-sec div:nth-of-type(2) div{
+    width: 75%;
+}
+.section3 .main-box1 .image-side .skills-sec div:nth-of-type(3) div{
+    width: 85%;
 
+}
+.section3 .main-box1 .image-side .skills-sec h1{
+    width: 75%;
+    text-align: center;
+    margin: 35px 0 0 0;
+    font-weight: 300;
+    color: #ffffff6e;
+}
 /* content section */
 .section3 .main-box1 .content-side{
     width: 100%;
 max-width: 653px;
 
 }
-.section3 .main-box1 .content-side h3 , .section3 .main-box2 h3 {
-    font-size: 22px;
+.section3 .main-box1 .content-side h3 , .section3 .main-box1 .content-side h1 span,.section3 .main-box2 h3 {
+    font-size: 23px;
+    
 }
-.section3 .main-box1 .content-side h3 span ,.section3 .main-box2 h3 span{
+.section3 .main-box1 .content-side h3 span ,.section3 .main-box1 .content-side h1 span,.section3 .main-box2 h3 span{
     color: #dad7fc
 }
 .section3 .main-box1 .content-side h1{
@@ -219,12 +254,14 @@ font-weight: 900;
 
 
 }
-.section3 .main-box1 .content-side h1 span{
-    font-size: 22px;
-    color: #dad7fc;
-}
+
 .section3 .main-box1 .content-side p ,.section3 .main-box2 p{
 margin: 20px 0px 40px 0;
+line-height: 2;
+color: #ced4dd;
+font-size:18px;
+font-family: "Source Sans Pro";
+font-weight: 600;
 }
 
 @media screen and (max-width:1100px) {
@@ -238,8 +275,6 @@ width: 55%;
 }
     .section3 .main-box1 .content-side p, .section3 .main-box2 p {
 margin: 20px 0px 40px 0;
-font-size: 14px;
-line-height: 25px;
 }
 }
 

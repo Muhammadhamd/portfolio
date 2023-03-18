@@ -56,7 +56,7 @@ for (let i = 0; i < midSingel.length; i++) {
       midSingel[i].style = "color:darkorange";
     
 }
-   
+  //  mid headings highlight words
    const midHeadings = [
    document.querySelector(".section1 .container h3 span"),
    document.querySelector(".section3 .main-box1 .content-side h3 span"),
@@ -71,6 +71,21 @@ for (let i = 0; i < midHeadings.length; i++) {
     
 }
 
+// for paragrapgh of about section   
+      let aboutParagraph = document.querySelectorAll(".section3 .main-box1 .content-side p, .section3 .main-box2 p");
+      for (let i = 0; i < aboutParagraph.length; i++) {
+           aboutParagraph[i].style = "color:black;";
+        
+      }
+
+      // skills section which is in image section of about
+      document.querySelector(".section3 .main-box1 .image-side .skills-sec h1").style ="color: #0000006e;";
+      let skillScales = document.querySelectorAll(".section3 .main-box1 .image-side .skills-sec div div");
+      for (let i = 0; i < skillScales.length; i++) {
+        skillScales[i].style = "background-color:darkorange;height:4px;";
+
+        
+      }
 // for blog1
   
  

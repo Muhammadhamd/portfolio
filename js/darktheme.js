@@ -59,6 +59,21 @@ midHeadings[i].style = "color: #dad7fc;";
 
 }
 
+// for paragrapgh of about section   
+let aboutParagraph = document.querySelectorAll(".section3 .main-box1 .content-side p, .section3 .main-box2 p");
+for (let i = 0; i < aboutParagraph.length; i++) {
+     aboutParagraph[i].style = "";
+  
+}
+      // skills section which is in image section of about
+      
+      document.querySelector(".section3 .main-box1 .image-side .skills-sec h1").style ="";
+      let skillScales = document.querySelectorAll(".section3 .main-box1 .image-side .skills-sec div div");
+      for (let i = 0; i < skillScales.length; i++) {
+         skillScales[i].style = "";
+        
+      }
+
 // for blog1
 
 
