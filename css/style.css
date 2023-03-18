@@ -37,6 +37,7 @@ background: #0000007d;
 }
 .header nav{
     display: flex;
+    align-items: center;
 }
 .header nav a ,.header nav div {
     color: #fff;
@@ -56,6 +57,7 @@ background: #0000007d;
     }
     .header nav .menu-mb{
         display: none;
+        font-size: 25px;
     }
 
 
@@ -247,23 +249,40 @@ width: 275px;
 
 }
 }
-@media screen and (max-width: 700px){
+@media screen and (max-width: 762px){
+    /* to hide and show list of pages */
+
         .header nav .menu-mb{
             display: block;
     }
     .header nav a:nth-of-type(5){
     display: none;
 }
-}
-@media screen and (max-width: 660px){
 
+.menu-mb .menu-list div:nth-of-type(5){
+    display: block;
+}
+
+}
+
+@media screen and (max-width: 714px){
+
+    /* to hide and show list of pages */
     .header nav a:nth-of-type(4){
-    display: none;
+        display: none;
+    }
+    .menu-mb .menu-list div:nth-of-type(4){
+        display: block;
+    }
 }
-}
-@media screen and (max-width: 580px){
+@media screen and (max-width: 620px){
+    /* to hide and show list of pages */
+
 .header nav a:nth-of-type(3){
     display: none;
+}
+.menu-mb .menu-list div:nth-of-type(3){
+    display: block;
 }
 .section1 .container h1{
     font-size: 50px;
@@ -307,20 +326,23 @@ width: 275px;
 .section2 .blog-div2 .main-box .blog  p {
     font-size: 12px;
 }
+    /* to hide and show list of pages */
+.header nav a:nth-of-type(2){
+    display: none;
+}
+.menu-mb .menu-list div:nth-of-type(2){
+    display: block;
+}
     }
     @media screen and (max-width: 430px){
         .header .logo{
             font-size: 20px;
         }
-        .header nav div{
-            font-size: 19px;
-        }
+
         .header nav a{
             font-size: 14px;
         }
-        /* .header nav a:nth-of-type(2){
-    display: none;
-} */
+
 .section1 .container h3 span{
     font-size: 15px;
 }
@@ -329,13 +351,18 @@ width: 275px;
     }
 
 
-    @media screen and (max-width: 335px){
+    @media screen and (max-width: 365px){
         .header{
             padding: 20px 5%;
         }
-        .header nav a{
-            display:none ;
-        }
+
+            /* to hide and show list of pages */
+.header nav a:nth-of-type(1){
+    display: none;
+}
+.menu-mb .menu-list div:nth-of-type(1){
+    display: block;
+}
         .header nav div{
             font-size: 30px;
         }

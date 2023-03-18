@@ -1,0 +1,38 @@
+.theme-div{
+    width: 83px;
+    background-color: #36374d;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+.theme-div button{
+    border-radius: 50%;
+    width: 26px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+}
+.theme-div .ball{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    right: 7px;
+    transition:.5s linear;
+}
+
+@media screen and (max-width:560px) {
+    .theme-div{
+        width: 76px;
+    }
+    .theme-div .ball{
+        width: 25px;
+        height: 25px;
+    }
+    .theme-div button{
+        font-size: 15px;
+    }
+}

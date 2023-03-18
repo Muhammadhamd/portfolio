@@ -9,9 +9,8 @@
 
 
 
-    document.querySelector("body").style = "background-color: #1f242d;color: #fff;";
-    document.querySelector(".header").style.background= "background: linear-gradient(to bottom, #000, #0003 70%,#0000);";
-    document.querySelector(".scrolled").style.background= "background: #0000007d;";
+    document.querySelector(".header").style= "";
+    // document.querySelector(".header.scrolled").style= "background: #0000007d";
     document.querySelector(".header .logo").style= "color: #fff;";
     const headNavA = document.querySelectorAll(".header nav a");
     for(let i=0; i < headNavA.length; i++){
@@ -28,8 +27,11 @@
 document.querySelector(".section3 .main-box1 .image-side .img-frame ").style = "box-shadow: 0px 0px 10px #0ed;";
 
 
-
+// social links
 let socialLink = document.querySelectorAll(".social-div a");
+
+// cv download button
+document.querySelector(".container .btn").style ="";
 
 for (let i = 0; i < socialLink.length; i++) {
 socialLink[i].style = "color: #0ef;border: 2px solid #0ef;";
@@ -90,5 +92,6 @@ midHeadings[i].style = "color: #dad7fc;";
     form[i].style = "";
     
   }
+  document.querySelector("body").style = "background-color: #1f242d;color: #fff;";
   
 })
