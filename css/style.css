@@ -389,6 +389,14 @@ justify-content: center;
     .section1 .container .social-div a{
         margin:10px 0 0 10px;
     }
+    .container .btn{
+        font-size: 14px;
+    }
 
+    }
 
+    @media screen and (max-width:284px) {
+        .section1 .container h1{
+            font-size: 40px;
+        }
     }

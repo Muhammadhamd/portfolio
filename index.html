@@ -35,20 +35,24 @@ rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/a
     max-height: 221px;
     overflow: auto;
     }
-    .menu-mb .menu-list div{
+    .menu-mb .menu-list div {
         display: none;
         text-align:end;
     padding: 0;
     margin: 6px 2px;
     font-size: 25px;
     }
+    .menu-mb .menu-list div a{
+        text-decoration: none;
+        color: white;
+    }
 </style>
 <body>
     <header class="header active-header" id="header">
         <a href="" class="logo">Portfolio.</a>
         <nav>
-            <a href="#" style="--i:1;" class="active">Home</a>
-            <a href="#" style="--i:2;">Contact</a>
+            <a href="#home" style="--i:1;" class="active">Home</a>
+            <a href="#contact" style="--i:2;">Contact</a>
             <a href="#blog" style="--i:3;">Blogs</a>
             <a href="#about" style="--i:4;">About</a>
             <a href="#" style="--i:5;">Services</a>
@@ -59,16 +63,16 @@ rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/a
             </div>
             <div class="menu-mb"><i class='bx bx-menu'></i>
                 <div name="" id="menu-list" class="menu-list">
-                    <div value="">Home</div>
-                    <div value="">Contact</div>
-                    <div value="">Blogs</div>
-                    <div value="">About</div>
-                    <div value="">Services</div>
+                    <div ><a href="#home">Home</a></div>
+                    <div ><a href="#contact"> Contact</a></div>
+                    <div ><a href="#blog"> Blogs</a></div>
+                    <div ><a href="#about"> About</a></div>
+                    <div ><a href="#"> Services</a></div>
                 </div>
             </div>
         </nav>
     </header>
-    <section class="section1">
+    <section class="section1" id="home">
 <div class="container">
     <h3>Hello it's me</h3>
     <h1>Muhammad Hamd</h1>
@@ -220,7 +224,7 @@ rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/a
         Ilove to code because it make you think about problem solving and also it give me pleaser when others are setisfied by my code</p>
       </div>
     </section>
-    <section class="section4">
+    <section class="section4" id="contact">
         <h3>Want to contact <span>Me</span>?</h3>
         <form action="">
             <div><p>.</p><p>.</p></div>
