@@ -1,9 +1,8 @@
 
-        // dark theme script again
+const dTheme = () => {
 
-        const darkTheme = document.getElementById("darktheme");
+  localStorage.setItem("theme", "dark");
 
- darkTheme.addEventListener("click",function(){
 
     transformBall.style = "right:7px;";
 
@@ -109,4 +108,20 @@ for (let i = 0; i < aboutParagraph.length; i++) {
   }
   document.querySelector("body").style = "background-color: #1f242d;color: #fff;";
   
-})
+}
+
+        // dark theme script again
+
+        const darkTheme = document.getElementById("darktheme");
+
+ darkTheme.addEventListener("click",dTheme)
+
+
+window.onload = function() {
+  const theme = localStorage.getItem("theme");
+  if (theme === "dark") {
+    // Apply dark theme
+  console.log("dark mode")
+  dTheme()
+  }
+}

@@ -1,11 +1,10 @@
 
     // light theme script
 
-    const lightTheme = document.getElementById("lighttheme");
-            // to transform theme toggle
-            const transformBall = document.querySelector(".theme-div .ball");
-    lightTheme.addEventListener("click",function(){
+    const lTheme = () => {
         
+
+      localStorage.setItem("theme", "light");
 
 
         transformBall.style = "right:40px;";
@@ -120,6 +119,19 @@ for (let i = 0; i < midHeadings.length; i++) {
         
       }
       
-    })
+    }
+
+    const lightTheme = document.getElementById("lighttheme");
+            // to transform theme toggle
+            const transformBall = document.querySelector(".theme-div .ball");
+    lightTheme.addEventListener("click", lTheme)
     
 
+    window.onload = function() {
+      const theme = localStorage.getItem("theme");
+      if (theme === "light") {
+        // Apply light theme
+      console.log("light mode")
+      lTheme()
+      }
+    }
