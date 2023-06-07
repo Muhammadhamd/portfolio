@@ -1,0 +1,24 @@
+.education-list li::marker{
+    background-color: bisque;
+}
+.education-bg{
+        border-bottom: 2px solid;
+    padding: 1px 16px;
+    max-width: 600px;
+    width: 100%;
+}
+.education-bg h3{}
+.education-bg p{}
+.education-bg .result-div{
+    display: flex;
+    justify-content: space-between;
+}
+.education-bg .result-div p{
+    font-size: 15px;
+}
+.education-bg .result-div .date{
+    font-size: 13px;
+    /* font-weight: lighter; */
+    text-align: end;
+    color: #7893a6c4;
+}

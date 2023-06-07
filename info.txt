@@ -1,0 +1,15 @@
+as we know that index.html = main page{
+
+    
+}
+
+style.css contain css of index and some simular styling to all other pages{
+
+
+}
+
+js/script.js contain js of index main file and some other simular functions to other pages{
+
+
+
+}

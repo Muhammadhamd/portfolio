@@ -1,0 +1,219 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+}
+body{
+    background-color: #1f242d;
+    color: #fff;
+    transition: 1s all;
+    --tw-bg-opacity: 1;
+    background-color: rgb(15 23 42/var(--tw-bg-opacity));
+}
+
+
+
+.header{
+    display: flex;
+    position: fixed;
+    background: transparent;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px 10%;
+    z-index: 100;
+    align-items: center;
+     background: linear-gradient(to bottom, #000, #0003 70%,#0000); /* background when scroll is in the top */
+transition: background .5s; /* control how smooth the background changes */
+}
+
+.header.scrolled{
+background: #0000007d;
+}
+.header .logo{
+    font-size: 25px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    /* opacity: 0; */
+    animation: slideright 1s ease forwards;
+}
+.header nav{
+    display: flex;
+    align-items: center;
+}
+.header nav a ,.header nav div {
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 0 0 0 30px;
+    transition:.3s ;
+    animation: slidetop .5s ease forwards;
+    /* opacity: 0; */
+    animation-delay: calc(.2s * var(--i));
+    }
+
+    .header nav a:hover ,.header nav a.active{
+        color: #0ef;
+        padding: 0px 0px;
+    }
+    .header nav .menu-mb{
+        display: none;
+        font-size: 25px;
+    }
+
+    .menu-mb .menu-list {
+        display: none;
+        max-width: 200px;
+        background-color: #00000063;
+        color: black;
+        position: absolute;
+        right: 11px;
+        border-radius: 10px 0px 10px 10px;
+        padding: 15px 10px;
+        flex-direction: column;
+        align-items: center;
+        height: 69vh;
+        max-height: 221px;
+        overflow: auto;
+      }
+  
+      .menu-mb .menu-list div {
+        display: none;
+        text-align: end;
+        padding: 0;
+        margin: 6px 2px;
+        font-size: 25px;
+      }
+  
+      .menu-mb .menu-list div a {
+        text-decoration: none;
+        color: white;
+      }
+
+      /* theme tiggle css */
+      .theme-div{
+        width: 83px;
+        background-color: #36374d;
+        border-radius: 50px;
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 10px;
+    }
+    .theme-div button{
+        border-radius: 50%;
+        width: 26px;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        font-size: 20px;
+    }
+    .theme-div .ball{
+        position: absolute;
+        background-color: rgb(255, 255, 255);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        right: 7px;
+        transition:.5s linear;
+    }
+    
+    @media screen and (max-width:560px) {
+        .theme-div{
+            width: 76px;
+        }
+        .theme-div .ball{
+            width: 25px;
+            height: 25px;
+        }
+        .theme-div button{
+            font-size: 15px;
+        }
+    }
+    @media screen and (max-width: 762px){
+        /* to hide and show list of pages */
+    
+            .header nav .menu-mb{
+                display: block;
+        }
+        .header nav a:nth-of-type(5){
+        display: none;
+    }
+    
+    .menu-mb .menu-list div:nth-of-type(5){
+        display: block;
+    }
+    
+    }
+    
+@media screen and (max-width: 714px){
+
+    /* to hide and show list of pages */
+    .header nav a:nth-of-type(4){
+        display: none;
+    }
+    .menu-mb .menu-list div:nth-of-type(4){
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 620px){
+    /* to hide and show list of pages */
+
+.header nav a:nth-of-type(3){
+    display: none;
+}
+.menu-mb .menu-list div:nth-of-type(3){
+    display: block;
+}
+}
+
+
+@media screen and (max-width: 500px){
+    /* to hide and show list of pages */
+    .header nav a:nth-of-type(2){
+        display: none;
+    }
+    .menu-mb .menu-list div:nth-of-type(2){
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 430px){
+    .header .logo{
+        font-size: 20px;
+    }
+
+    .header nav a{
+        font-size: 14px;
+    }
+
+
+}
+
+
+@media screen and (max-width: 365px){
+    .header{
+        padding: 20px 5%;
+    }
+
+        /* to hide and show list of pages */
+.header nav a:nth-of-type(1){
+display: none;
+}
+.menu-mb .menu-list div:nth-of-type(1){
+display: block;
+}
+    .header nav div{
+        font-size: 30px;
+    }
+}
+
+
+/* this style add diff color of heading or text  */
+.diff-color{
+    color: #86c163;
+}
